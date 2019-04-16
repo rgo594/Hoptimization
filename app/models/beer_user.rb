@@ -1,2 +1,2 @@
-class Beer_User < ActiveRecord::Base
+class BeerUser < ActiveRecord::Base
 end
