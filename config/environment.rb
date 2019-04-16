@@ -1,9 +1,9 @@
 require 'bundler'
 require 'pry'
 require 'brewery_db'
-require 'ActiveRecord'
 require_all 'app'
-require_all 'lib'
+
+
 
 
 Bundler.require
