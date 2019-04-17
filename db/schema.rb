@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
-
-  create_table "beer", force: :cascade do |t|
-    t.string "name"
-    t.string "location"
-    t.string "beer_type"
-    t.string "description"
-  end
+ActiveRecord::Schema.define(version: 5) do
 
   create_table "beer_user", force: :cascade do |t|
     t.integer "beer_id"
     t.integer "user_id"
+  end
+
+  create_table "beers", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "beer_type"
+    t.string "description"
+    t.string "beer_key"
   end
 
   create_table "users", force: :cascade do |t|
