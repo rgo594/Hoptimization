@@ -17,16 +17,37 @@ def user_valid?(user)
   end
 end
 
-
 def menu
-  puts"
+  puts" Enter number 1-5
   1.
   2.
   3.
   4.
-  5. 
+  5. exit
   "
+  menu_input
 end
+
+
+def menu_input
+  input = gets.chomp
+  case input
+  when "1"
+    puts "a"
+  when "2"
+    puts "b"
+  when "3"
+    puts "c"
+  when "4"
+    puts "d"
+  when "5"
+    abort
+  else
+    puts "invalid entry"
+    menu
+  end
+end
+
 
 def favorite
   puts "Please enter your favorite beer"
