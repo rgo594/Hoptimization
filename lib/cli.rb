@@ -41,6 +41,7 @@ end
 def find_profile
   puts "Search for a profile"
   profile_input = gets.chomp
+  x = User.find_by(name: profile_input)
 end
 
 def suggest_beer

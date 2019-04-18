@@ -31,7 +31,7 @@ def beer_input
         beer_input
     end
 end 
-        
+    
 # binding.pry
         u_input = beer_input
         fav_id = beer_search.to_a[u_input]["id"]
@@ -43,3 +43,4 @@ bf = Beer.find_or_create_by(beer_key: fav_id, description: fav_description, name
 
 
 binding.pry
+# qYKX5h
