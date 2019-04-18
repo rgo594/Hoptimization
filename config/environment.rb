@@ -3,6 +3,7 @@ require 'pry'
 require 'brewery_db'
 require 'active_record'
 require 'require_all'
+require 'colorize'
 
 
 

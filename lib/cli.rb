@@ -32,9 +32,9 @@ def menu_input
   input = gets.chomp
   case input
   when "1"
-
+    find_beer
   when "2"
-    puts "b"
+    find_profile
   when "3"
     puts "c"
   when "4"
@@ -53,29 +53,30 @@ def favorite
   gets.chomp
 end
 
-def find_beer
-  puts "Search for a profile"
-  profile_input = gets.chomp
-  Beer.all.select do |beer|
-    beer.name == profile_input
-  end
+def find_beer()
+  puts "Please enter beer name"
+  input = gets.chomp
+  puts brewery_db.search.beers(q: input)
+  binding.pry
 end
 
 def find_profile
   puts "Search for a profile"
   profile_input = gets.chomp
-<<<<<<< HEAD
-  # User.all.select do |user|
-  #   user.name == profile_input
-  #   # binding.pry
-  User.find_by(name: profile_input)
-  end
-
-
-=======
-  x = User.find_by(name: profile_input)
+  profile = User.find_by(name: profile_input)
+    puts "Name: #{profile.name.colorize(:red)} | Favorite Beer: #{find_beer_key(profile.favorite_beer).colorize(:red)} | Description: #{find_beer_description(profile.favorite_beer).colorize(:yellow)}"
 end
->>>>>>> T3
+
+def find_beer_key(key)
+  beer_name = Beer.find_by(beer_key: key)
+  beer_name.name
+end
+
+def find_beer_description(key)
+  beer_desc = Beer.find_by(beer_key: key)
+  beer_desc.description
+end
+
 
 def suggest_beer
 
