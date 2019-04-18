@@ -64,6 +64,7 @@ end
 def find_profile
   puts "Search for a profile"
   profile_input = gets.chomp
+<<<<<<< HEAD
   # User.all.select do |user|
   #   user.name == profile_input
   #   # binding.pry
@@ -71,6 +72,10 @@ def find_profile
   end
 
 
+=======
+  x = User.find_by(name: profile_input)
+end
+>>>>>>> T3
 
 def suggest_beer
 
